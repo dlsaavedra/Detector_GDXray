@@ -1,0 +1,32 @@
+{
+    "model" : {
+        "backend":      "resnet50",
+        "image_min_side":        400,
+        "image_max_side":         400,
+        "labels":               ["Gun" ,"Knife", "Razor", "Shuriken"]
+    },
+
+    "train": {
+        "train_annot_folder":   "Experiment_0/Training/anns/",
+        "name_csv":             "Experiment_0/Experiment_0_train",
+
+
+        "batch_size":           4,
+        "nb_epochs":            10,
+        "steps":                100,
+        "multi-gpu" :           1,
+        "based_weights":  "keras-retinanet-master/resnet50_coco_best_v2.1.0.h5",
+        "saved_weights":  "Experiment_0/weights_resnet50.h5"
+    },
+
+    "valid": {
+        "valid_annot_folder":   "Experiment_0/Validation/anns/",
+        "name_csv":             "Experiment_0/Experiment_0_val"
+    },
+    "test": {
+         "test_annot_folder":   "../Experiment/Testing/anns/",
+         "name_csv":             "Experiment_0/Experiment_0_test",
+
+         "test_times":          1
+     }
+}

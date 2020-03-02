@@ -1,0 +1,42 @@
+{
+    "model" : {
+        "min_input_size":       192,
+        "max_input_size":       256,
+        "anchors":              [10,13,  16,30,  33,23,  30,61,  62,45,  59,119,  116,90,  156,198,  373,326],
+        "labels":               ["Gun", "Knife", "Razor", "Shuriken"],
+	"backend": 		"tiny_yolo_backend.h5"
+    },
+
+    "train": {
+        "train_image_folder":   "../Experimento_3/Training/images/",
+        "train_annot_folder":   "../Experimento_3/Training/anns/",
+	"cache_name":           "experimento_3_gpu.pkl",
+
+        "train_times":          1,
+	
+        "batch_size":           4,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        10,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0,1",
+
+	"grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,           
+	
+	"tensorboard_dir":      "log_experimento_3_gpu",
+	"saved_weights_name":   "../Experimento_3/Resultados_yolo3/tiny_yolo/experimento_3_yolo3_tiny_yolo.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":    "../Experimento_3/Training/images/",
+        "valid_annot_folder":    "../Experimento_3/Training/anns/",
+        "cache_name":           "experimento_3_gpu_val.pkl",
+
+        "valid_times":          1
+    }
+}

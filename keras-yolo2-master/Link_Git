@@ -1,0 +1,3 @@
+https://github.com/experiencor/keras-yolo2
+
+Con mAP extarído de yolo3, para esto se importo el código generator.py y la carpeta utils.

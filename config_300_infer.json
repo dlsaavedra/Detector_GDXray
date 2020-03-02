@@ -1,0 +1,34 @@
+{
+    "model" : {
+        "backend":      "ssd300",
+        "input":        448,
+        "labels":      ["Gun", "Knife", "Razor", "Shuriken"]
+    },
+
+
+        "train": {
+            "train_image_folder":   "Experiment_0/Training/images",
+            "train_annot_folder":   "Experiment_0/Training/anns",
+            "train_image_set_filename": "Experiment_0/Training/train.txt",
+
+            "train_times":          1,
+            "batch_size":           8,
+            "learning_rate":        1e-4,
+            "warmup_epochs":        3,
+            "nb_epochs":            100,
+            "steps":                10,
+            "saved_weights_name":   "Weights Trained Model/ssd300_full_infer.h5",
+            "debug":                true
+        },
+        "valid": {
+                "valid_image_folder":   "Experiment_0/Validation/images/",
+                "valid_annot_folder":   "Experiment_0/Validation/anns/",
+                "valid_image_set_filename":   "Experiment_0/Validation/val.txt"
+            },
+
+    "test": {
+            "test_image_folder":   "Experiment_0/Testing/images",
+            "test_annot_folder":   "Experiment_0/Testing/anns",
+            "test_image_set_filename":   "Experiment_0/Testing/test.txt"
+        }
+}

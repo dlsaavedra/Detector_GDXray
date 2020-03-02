@@ -1,0 +1,4 @@
+keras_retinanet/bin/train.py --weights snapshots/resnet50_csv_09.h5 --backbone resnet50 --batch-size 2 --multi-gpu 1 --epochs 2 --steps 10 --image-min-side 400 --image-max-side 600 --compute-val-loss   csv Experimento_3_anns.csv Experimento_3_class.csv --val-annotations Experimento_3_anns.csv 
+
+
+keras_retinanet/bin/evaluate.py --image-min-side 400 --image-max-side 600 csv Experimento_3_anns.csv Experimento_3_class.csv model snapshots/resnet50_csv_infer.h5

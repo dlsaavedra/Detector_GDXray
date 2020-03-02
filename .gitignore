@@ -1,0 +1,9 @@
+Data/
+Experiment_0/
+logs/
+Weights Trained Model/
+
+ToDoList.txt
+
+*.h5
+*.weights

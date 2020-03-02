@@ -1,0 +1,44 @@
+{
+    "model" : {
+        "backend":              "Full Yolo",
+        "input_size":           448,
+        "anchors":              [1.31,1.30, 3.01,5.73, 5.76,0.79, 6.11,3.55, 7.70,7.37],
+        "max_box_per_image":    10,
+        "labels":               ["Gun", "Knife", "Razor", "Shuriken"]
+    },
+
+    "train": {
+        "train_image_folder":   "../Experiment_0/Training/images/",
+        "train_annot_folder":   "../Experiment_0/Training/anns/",
+
+        "train_times":          1,
+        "pretrained_weights":   "",
+        "batch_size":           4,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        10,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "snapshots/Experiment_0.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "../Experiment_0/Validation/images/",
+        "valid_annot_folder":   "../Experiment_0/Validation/anns/",
+        "cache_name":           "experiment_0_val.pkl",
+
+        "valid_times":          1
+    },
+   "test": {
+        "test_image_folder":   "../Experiment_0/Testing/images/",
+        "test_annot_folder":   "../Experiment_0/Testing/anns/",
+        "cache_name":          "experiment_0_test.pkl",
+
+        "test_times":          1
+    }
+}
