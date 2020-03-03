@@ -10,7 +10,13 @@ The repositories of the detectors used are the following:
 To start using the detectors you just have to clone or download the repository and follow the instructions in the Readme.
 
 # Requirement
-*** ***
+To install the dependencies, run
+
+pip install -r requirements.txt
+
+And if you want use the GPU to work, make sure you've got the drivers installed beforehand (CUDA).
+
+It has been tested to work with Python 3.5.3.
 
 # 0- Data GDXray
 The database to use the public database GDXray which we can download from [GDXray](https://domingomery.ing.puc.cl/material/gdxray/), specifically you must create the "Data" folder and copy the folders B0049, B0051, B0052, B0076, B0082 and BX_100 (new folder) from GDXray. For the testing use the folder B0046 with its annotation, you can also download these folders in the following link :
