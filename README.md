@@ -12,7 +12,7 @@ To start using the detectors you just have to clone or download the repository a
 # Requirement
 To install the dependencies, run
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 And if you want use the GPU to work, make sure you've got the drivers installed beforehand (CUDA).
 
