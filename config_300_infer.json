@@ -1,7 +1,7 @@
 {
     "model" : {
         "backend":      "ssd300",
-        "input":        448,
+        "input":        300,
         "labels":      ["Gun", "Knife", "Razor", "Shuriken"]
     },
 
@@ -17,7 +17,7 @@
             "warmup_epochs":        3,
             "nb_epochs":            100,
             "steps":                10,
-            "saved_weights_name":   "Weights Trained Model/ssd300_full_infer.h5",
+            "saved_weights_name":   "Weights Trained Model/ssd300_infer.h5",
             "debug":                true
         },
         "valid": {
