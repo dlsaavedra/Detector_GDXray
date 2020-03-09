@@ -54,7 +54,7 @@ Example image created:
 # 3- Training
  ## Download the pre trained weights
  First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/open?id=19rYT577UqQwdJ4sNeq240c_X0NK3d1kB) and place them in their respective folders.
- 
+
  ## Run Training
  Following commands for Trainig:
 
@@ -65,10 +65,24 @@ Example image created:
 + `python train_retinanet.py -c config_resnet50.json` RetinaNet
 
 To change the folders used for training and the parameters of this, you must modify the configuration file `.json`.
- 
+
  ## Suggestion
  If your computer does not have a GPU, it is recommended to only train the SSD7 model, due to the computation time that the other models need.
-# 4- Usage your Models
+
+# 4- Evaluate
+For evaluate the trained models just need specify the test folder with respective annotation in the configuration file `json`.
+
+ ## Run Evaluate
+ Following commands for Evaluate:
+ + `python evaluate_yolo2.py -c config_full_yolo2.json` Yolov2
+ + `python evaluate_yolo3.py -c config_full_yolo3.json` Yolov3
+ + `python evaluate_sdd.py -c config_7_infer.json` SSD7
+ + `python evaluate_sdd.py -c config_300.json` SSD300
+ + `python evaluate_retinanet.py -c config_resnet50.json` RetinaNet
+
+The default configuration have folder B0046 as folder test.
+
+# 5- Usage your Models
 For use your trained models to detect, follow the same structure that in section 1.
 
 + `python predict_yolo2.py -c config_full_yolo2.json -i input_path/folder -o save/folder/detection` Yolov2
@@ -79,3 +93,8 @@ For use your trained models to detect, follow the same structure that in section
 
 # Contributions
 Show a way to use the limited GDXray database to create a database suitable for training the presented detectors. Also simplify the use of different detectors based on the repositories mentioned.
+
+# Research dangerous objects detection (Daniel Saavedra)
+the investigation can be replicated using the same code as Experiment 0, only line 101 must be changed in `Create_Data_Superimpose.py`:
+`num_image_per_baggage = 200`.
+Then the training and testing of the different models is performed as explained above.
