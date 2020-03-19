@@ -12,7 +12,7 @@ To start using the detectors you just have to clone or download the repository a
 # Requirement
 To install the dependencies, run
 
-`pip3 install -r requirements.txt --user`
+`pip install -r requirements.txt --user`
 
 And if you want use the GPU to work, make sure you've got the drivers installed beforehand (CUDA).
 
@@ -27,6 +27,10 @@ Example image test:
 ![Test](images/B0046_0004.png)
 
 # 1- Use Trained Model
+## Download the pre trained weights
+ First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/open?id=19rYT577UqQwdJ4sNeq240c_X0NK3d1kB) and place them in their respective folders.
+ 
+### Download Weights Trained Model 
 You can use already trained models to use directly in X-ray images to detect "Gun, Knife, Razor and Shuriken", for this create the "Weights Trained Model" folder in the repository folder and download the weights in the folder [Weights Trained Model](https://drive.google.com/open?id=13oyOlrYvLaIBY5YvCZiLtVtM_pQgYlA9).
 Follow the following commands for detection:
 
@@ -37,6 +41,7 @@ Follow the following commands for detection:
 + `python predict_retinanet.py -c config_resnet50_infer.json -i input_path/folder -o save/folder/detection` RetinaNet
 
 Example Detection:
+`python predict_retinanet.py -c config_resnet50_infer.json -i Data/Testing/images/B0046_0001.png -o Example_retinanet/`
 
 ![Train](images/Detection.png)
 
@@ -52,8 +57,7 @@ Example image created:
 ![Train](images/Bolso4_5_100_5_0.png)
 
 # 3- Training
- ## Download the pre trained weights
- First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/open?id=19rYT577UqQwdJ4sNeq240c_X0NK3d1kB) and place them in their respective folders.
+ 
 
  ## Run Training
  Following commands for Trainig:
