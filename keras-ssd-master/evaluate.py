@@ -1,7 +1,7 @@
 from keras import backend as K
 from keras.models import load_model
 from keras.optimizers import Adam
-from scipy.misc import imread
+from imageio import imread
 import numpy as np
 from matplotlib import pyplot as plt
 import argparse
