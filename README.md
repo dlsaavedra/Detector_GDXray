@@ -41,7 +41,10 @@ Follow the following commands for detection:
 + `python predict_retinanet.py -c config_resnet50_infer.json -i input_path/folder -o save/folder/detection` RetinaNet
 
 Example Detection:
-`python predict_retinanet.py -c config_resnet50_infer.json -i Data/Testing/images/B0046_0001.png -o Example_retinanet/`
+
++ `python predict_yolo2.py -c config_full_yolo2_infer.json -i Data/Testing/images/B0046_0001.png -o Example_yolo2/`
++ `python predict_retinanet.py -c config_resnet50_infer.json -i Data/Testing/images/B0046_0001.png -o Example_retinanet/`
+
 
 ![Train](images/Detection.png)
 
