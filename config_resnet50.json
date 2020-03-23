@@ -25,7 +25,7 @@
         "name_csv":             "Experiment_0/Experiment_0_val"
     },
     "test": {
-         "test_annot_folder":   "Experiment_0/Testing/anns/",
+         "test_annot_folder":   "Experiment_0/Validation/anns/",
          "name_csv":             "Experiment_0/Experiment_0_test",
 
          "test_times":          1

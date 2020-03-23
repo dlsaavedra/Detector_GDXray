@@ -337,7 +337,7 @@ class YOLO(object):
                                  workers          = 3,
                                  max_queue_size   = 8)
 
-        self.model.save_weights('last_' + saved_weights_name )
+        #self.model.save_weights(saved_weights_name + '_last' )
         #save_model(self.model, 'Save_Model.h5')
         ############################################
         # Compute mAP on the validation set
@@ -350,7 +350,7 @@ class YOLO(object):
         for label, (average_precision, num_annotations) in average_precisions.items():
             print('{:.0f} instances of class'.format(num_annotations),
                   self.labels[label], 'with average precision: {:.4f}'.format(average_precision))
-        print('mAP: {:.4f}'.format(sum(average_precisions.values()) / len(average_precisions)))
+        #print('mAP: {:.4f}'.format(sum(average_precisions.values()) / len(average_precisions)))
 
     def evaluate(self,
                  generator,
