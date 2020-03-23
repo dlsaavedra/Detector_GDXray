@@ -244,7 +244,7 @@ def _main_(args):
         class_scale         = config['train']['class_scale'],
 	backend		    = config['model']['backend']
     )
-    
+
     print(train_model.summary())
     ###############################
     #   Kick off the training
@@ -272,9 +272,10 @@ def _main_(args):
     average_precisions = evaluate(infer_model, valid_generator)
 
     # print the score
-    for label, average_precision in average_precisions.items():
-        print(labels[label] + ': {:.4f}'.format(average_precision))
-    print('mAP: {:.4f}'.format(sum(average_precisions.values()) / len(average_precisions)))
+
+    for label, (average_precision, num_annotations) in average_precisions.items():
+        print('{:.0f} instances of class'.format(num_annotations),
+              labels[label], 'with average precision: {:.4f}'.format(average_precision))
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser(description='train and evaluate YOLO_v3 model on any dataset')
