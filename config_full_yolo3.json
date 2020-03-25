@@ -41,7 +41,7 @@
     },
    "test": {
      "test_image_folder":   "Experiment_0/Validation/images/",
-     "test_annot_folder":   "Experiment_0/Validation/images/",
+     "test_annot_folder":   "Experiment_0/Validation/anms/",
         "cache_name":          "keras-yolo3-master/experimento_0_test.pkl",
 
         "test_times":          1

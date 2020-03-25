@@ -20,8 +20,8 @@
         "debug":                true
     },
     "valid": {
-            "valid_image_folder":   "Experiment_0/Validation/images/",
-            "valid_annot_folder":   "Experiment_0/Validation/anns/",
+            "valid_image_folder":   "Experiment_0/Validation/images",
+            "valid_annot_folder":   "Experiment_0/Validation/anns",
             "valid_image_set_filename":   "Experiment_0/Validation/val.txt"
         },
 
