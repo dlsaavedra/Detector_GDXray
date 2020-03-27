@@ -31,6 +31,6 @@ progressbar2
 imgaug==0.4.0
 beautifulsoup4 == 4.7.1
 scikit-learn==0.20.0
-tensorflow-gpu==1.3
 lxml
 imageio
+pyparsing

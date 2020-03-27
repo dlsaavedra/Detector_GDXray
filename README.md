@@ -12,7 +12,7 @@ To start using the detectors you just have to clone or download the repository a
 # Requirement
 To install the dependencies, run
 
-`pip install -r requirements.txt --user`
+`pip3 install -r requirements.txt`
 
 And if you want use the GPU to work, make sure you've got the drivers installed beforehand (CUDA).
 
@@ -29,15 +29,15 @@ Example image test:
 # 1- Use Trained Model
 ## Download the pre trained weights
  First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/open?id=19rYT577UqQwdJ4sNeq240c_X0NK3d1kB) and place them in their respective folders.
- 
-### Download Weights Trained Model 
+
+### Download Weights Trained Model
 You can use already trained models to use directly in X-ray images to detect "Gun, Knife, Razor and Shuriken", for this create the "Weights Trained Model" folder in the repository folder and download the weights in the folder [Weights Trained Model](https://drive.google.com/open?id=13oyOlrYvLaIBY5YvCZiLtVtM_pQgYlA9).
 Follow the following commands for detection:
 
 + `python predict_yolo2.py -c config_full_yolo2_infer.json -i input_path/folder -o save/folder/detection` Yolov2
 + `python predict_yolo3.py -c config_full_yolo3_infer.json -i input_path/folder -o save/folder/detection` Yolov3
-+ `python predict_sdd.py -c config_7_infer.json -i input_path/folder -o save/folder/detection` SSD7
-+ `python predict_sdd.py -c config_300_infer.json -i input_path/folder -o save/folder/detection` SSD300
++ `python predict_ssd.py -c config_7_infer.json -i input_path/folder -o save/folder/detection` SSD7
++ `python predict_ssd.py -c config_300_infer.json -i input_path/folder -o save/folder/detection` SSD300
 + `python predict_retinanet.py -c config_resnet50_infer.json -i input_path/folder -o save/folder/detection` RetinaNet
 
 Example Detection:
@@ -60,15 +60,15 @@ Example image created:
 ![Train](images/Bolso4_5_100_5_0.png)
 
 # 3- Training
- 
+
 
  ## Run Training
  Following commands for Trainig:
 
 + `python train_yolo2.py -c config_full_yolo2.json` Yolov2
 + `python train_yolo3.py -c config_full_yolo3.json` Yolov3
-+ `python train_sdd.py -c config_7_infer.json` SSD7
-+ `python train_sdd.py -c config_300.json` SSD300
++ `python train_ssd.py -c config_7.json` SSD7
++ `python train_ssd.py -c config_300.json` SSD300
 + `python train_retinanet.py -c config_resnet50.json` RetinaNet
 
 To change the folders used for training and the parameters of this, you must modify the configuration file `.json`.
@@ -83,8 +83,8 @@ For evaluate the trained models just need specify the test folder with respectiv
  Following commands for Evaluate:
  + `python evaluate_yolo2.py -c config_full_yolo2.json` Yolov2
  + `python evaluate_yolo3.py -c config_full_yolo3.json` Yolov3
- + `python evaluate_sdd.py -c config_7_infer.json` SSD7
- + `python evaluate_sdd.py -c config_300.json` SSD300
+ + `python evaluate_ssd.py -c config_7_infer.json` SSD7
+ + `python evaluate_ssd.py -c config_300.json` SSD300
  + `python evaluate_retinanet.py -c config_resnet50.json` RetinaNet
 
 The default configuration have folder B0046 as folder test.
@@ -94,8 +94,8 @@ For use your trained models to detect, follow the same structure that in section
 
 + `python predict_yolo2.py -c config_full_yolo2.json -i input_path/folder -o save/folder/detection` Yolov2
 + `python predict_yolo3.py -c config_full_yolo3.json -i input_path/folder -o save/folder/detection` Yolov3
-+ `python predict_sdd.py -c config_7.json -i input_path/folder -o save/folder/detection` SSD7
-+ `python predict_sdd.py -c config_300.json -i input_path/folder -o save/folder/detection` SSD300
++ `python predict_ssd.py -c config_7.json -i input_path/folder -o save/folder/detection` SSD7
++ `python predict_ssd.py -c config_300.json -i input_path/folder -o save/folder/detection` SSD300
 + `python predict_retinanet.py -c config_resnet50.json -i input_path/folder -o save/folder/detection` RetinaNet
 
 # Contributions

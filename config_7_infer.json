@@ -28,6 +28,6 @@
 "test": {
         "test_image_folder":   "Experiment_0/Validation/images",
         "test_annot_folder":   "Experiment_0/Validation/anns",
-        "test_image_set_filename":   "Experiment_0/Validation/test.txt"
+        "test_image_set_filename":   "Experiment_0/Validation/val.txt"
     }
 }

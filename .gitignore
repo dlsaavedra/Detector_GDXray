@@ -2,6 +2,11 @@ Data/
 Experiment_0/
 logs/
 Weights Trained Model/
+Prueba_retinanet/
+Prueba_ssd7/
+Prueba_ssd300/
+Prueba_yolo2/
+Prueba_yolo3/
 
 ToDoList.txt
 

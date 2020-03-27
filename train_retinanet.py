@@ -39,7 +39,7 @@ def _main_(args):
     csv_anns_test = config['test']['name_csv'] + '_anns.csv'
     csv_classes_test = config['test']['name_csv'] + '_class.csv'
 
-
+    os.system(' python keras-retinanet-master/setup.py build_ext --inplace')
     print ('Training Retina resnet50')
     os.system('python keras-retinanet-master/keras_retinanet/bin/train.py --weights '+ config['train']['based_weights'] +
                 ' --snapshot ' + config['train']['saved_weights'] +

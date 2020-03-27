@@ -22,7 +22,7 @@ def _main_(args):
     with open(config_path) as config_buffer:
         config = json.loads(config_buffer.read())
 
-
+    os.system(' python keras-retinanet-master/setup.py build_ext --inplace')
     print ('Prediction RetinaNet')
     os.system('python keras-retinanet-master/predict.py --weights "' + config['train']['saved_weights_infer'] +
                 '" --backbone ' + config['model']['backend'] +
