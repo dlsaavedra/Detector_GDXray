@@ -15,6 +15,8 @@ To install the dependencies, run
 `pip3 install -r requirements.txt`
 
 And if you want use the GPU to work, make sure you've got the drivers installed beforehand (CUDA).
+and install
+`pip3 install tensorflow-gpu tensorflow-gpu==1.13.1`
 
 It has been tested to work with Python 3.6.8.
 
@@ -74,7 +76,7 @@ Example image created:
 To change the folders used for training and the parameters of this, you must modify the configuration file `.json`.
 
  ## Suggestion
- If your computer does not have a GPU, it is recommended to only train the SSD7 model, due to the computation time that the other models need.
+ If your computer does not have a GPU, it is recommended to only train the SSD7 model, due to the computation time that the other models need. Also, need to change configuration file of YOLO3`config_full_yolo3.json` line `gpu: "0,1"` to `gpu: "0"` and for Retinanet `"multi-gpu" :  1`.
 
 # 4- Evaluate
 For evaluate the trained models just need specify the test folder with respective annotation in the configuration file `json`.
