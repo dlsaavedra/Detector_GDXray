@@ -30,14 +30,14 @@
     "valid": {
         "valid_image_folder":   "Experiment_0/Validation/images/",
         "valid_annot_folder":   "Experiment_0/Validation/anns/",
-        "cache_name":           "keras-yolo2-master/experimento_0_val.pkl",
+        "cache_name":           "Experiment_0/experimento_0_val.pkl",
 
         "valid_times":          1
     },
    "test": {
         "test_image_folder":   "Experiment_0/Validation/images/",
         "test_annot_folder":   "Experiment_0/Validation/anns/",
-        "cache_name":          "keras-yolo2-master/experimento_0_val.pkl",
+        "cache_name":          "Experiment_0/experimento_0_val.pkl",
 
         "test_times":          1
     }
