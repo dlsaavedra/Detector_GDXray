@@ -14,9 +14,9 @@
             "train_times":          1,
             "batch_size":           8,
             "learning_rate":        1e-4,
-            "warmup_epochs":        3,
-            "nb_epochs":            100,
-            "steps":                10,
+            "warmup_epochs":        0,
+            "nb_epochs":            2,
+            "steps":                2,
             "saved_weights_name":     "Experiment_0/weights_ssd300.h5",
             "debug":                true
         },
