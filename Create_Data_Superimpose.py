@@ -88,7 +88,7 @@ def create_ann_xml(path, boxes, size_baggage):
 
 #%%
 
-name_experiment = 'Experiment_0'
+name_experiment = 'Experiment_1'
 
 data_path = 'Data/'
 path_save = os.getcwd() + '/' + name_experiment + '/'
@@ -129,13 +129,10 @@ path_objects = {'Razor': [],
           'Knife': [],
           'Shuriken': []}
 
-num_objects = {'Razor': 0,
-          'Gun': 0,
-          'Knife': 0,
-          'Shuriken': 0}
+
 
 folders_baggages = ["BX_100"]#['B0046']#['B0044', 'B0045', 'B0046', 'B0047']
-image_set_filenames = []
+
 
 ## Crear diccionario de listas con path de los objetos
 for k in folders_obj.keys():
@@ -170,7 +167,12 @@ except OSError:
 ## Iteracion sobre las carpetas de Training
 for train_val in ['Training/', 'Validation/']:
     path_save_train = path_save + train_val
-
+    image_set_filenames = []
+    num_objects = {'Razor': 0,
+              'Gun': 0,
+              'Knife': 0,
+              'Shuriken': 0}
+              
     for folder_b in folders_baggages:
 
         ## Iteracion sobre las imagen de la carpeta

@@ -10,13 +10,13 @@
     "train": {
         "train_image_folder":   "Experiment_0/Training/images/",
         "train_annot_folder":   "Experiment_0/Training/anns/",
-	"cache_name":           "keras-yolo3-master/experimento_0_train.pkl",
+	"cache_name":           "Experiment_0/experimento_0_train.pkl",
 
         "train_times":          1,
 
         "batch_size":           2,
         "learning_rate":        1e-4,
-        "nb_epochs":            1,
+        "nb_epochs":            20,
         "warmup_epochs":        0,
         "ignore_thresh":        0.5,
         "gpus":                 "0",
@@ -27,7 +27,7 @@
         "xywh_scale":           1,
         "class_scale":          1,
 
-	"tensorboard_dir":      "keras-yolo3-master/log_experimento_0",
+	"tensorboard_dir":      "Experiment_0/log_experimento_0",
 	"saved_weights_name":   "Experiment_0/weights_yolo3.h5",
         "debug":                true
     },
@@ -35,14 +35,14 @@
     "valid": {
         "valid_image_folder":   "Experiment_0/Validation/images/",
         "valid_annot_folder":   "Experiment_0/Validation/anns/",
-        "cache_name":           "keras-yolo3-master/experimento_0_val.pkl",
+        "cache_name":           "Experiment_0/experimento_0_val.pkl",
 
         "valid_times":          1
     },
    "test": {
      "test_image_folder":   "Experiment_0/Validation/images/",
      "test_annot_folder":   "Experiment_0/Validation/anms/",
-        "cache_name":          "keras-yolo3-master/experimento_0_test.pkl",
+        "cache_name":          "Experiment_0/experimento_0_val.pkl",
 
         "test_times":          1
     }

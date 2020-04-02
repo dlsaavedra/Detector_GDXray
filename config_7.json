@@ -14,8 +14,8 @@
         "batch_size":           8,
         "learning_rate":        1e-4,
         "warmup_epochs":        1,
-        "nb_epochs":            2,
-        "steps":                2,
+        "nb_epochs":            20,
+        "steps":                20,
         "saved_weights_name":     "Experiment_0/weights_ssd7.h5",
         "debug":                true
     },

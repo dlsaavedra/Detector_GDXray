@@ -12,8 +12,8 @@
 
 
         "batch_size":           4,
-        "nb_epochs":            2,
-        "steps":                2,
+        "nb_epochs":            20,
+        "steps":                20,
         "multi-gpu" :           1,
         "based_weights":  "keras-retinanet-master/snapshots/resnet50_coco_best_v2.1.0.h5",
         "saved_weights":  "Experiment_0/weights_retinanet50.h5",

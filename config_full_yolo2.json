@@ -8,14 +8,14 @@
     },
 
     "train": {
-      "train_image_folder":   "Experiment_0/Training/images/",
-      "train_annot_folder":   "Experiment_0/Training/anns/",
+      "train_image_folder":   "Experiment_1/Training/images/",
+      "train_annot_folder":   "Experiment_1/Training/anns/",
 
-        "train_times":          1,
+        "train_times":          5,
         "pretrained_weights":   "",
         "batch_size":           4,
         "learning_rate":        1e-4,
-        "nb_epochs":            10,
+        "nb_epochs":            20,
         "warmup_epochs":        0,
 
         "object_scale":         5.0 ,
@@ -23,21 +23,21 @@
         "coord_scale":          1.0,
         "class_scale":          1.0,
 
-        "saved_weights_name":   "Experiment_0/weights_yolo2.h5",
+        "saved_weights_name":   "Experiment_1/weights_yolo2.h5",
         "debug":                false
     },
 
     "valid": {
-        "valid_image_folder":   "Experiment_0/Validation/images/",
-        "valid_annot_folder":   "Experiment_0/Validation/anns/",
-        "cache_name":           "Experiment_0/experimento_0_val.pkl",
+        "valid_image_folder":   "Experiment_1/Validation/images/",
+        "valid_annot_folder":   "Experiment_1/Validation/anns/",
+        "cache_name":           "Experiment_1/experimento_0_val.pkl",
 
         "valid_times":          1
     },
    "test": {
-        "test_image_folder":   "Experiment_0/Validation/images/",
-        "test_annot_folder":   "Experiment_0/Validation/anns/",
-        "cache_name":          "Experiment_0/experimento_0_val.pkl",
+        "test_image_folder":   "Experiment_1/Validation/images/",
+        "test_annot_folder":   "Experiment_1/Validation/anns/",
+        "cache_name":          "Experiment_1/experimento_0_val.pkl",
 
         "test_times":          1
     }

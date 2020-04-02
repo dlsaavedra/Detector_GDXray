@@ -34,3 +34,5 @@ scikit-learn==0.20.0
 lxml
 imageio
 pyparsing
+pandas
+
