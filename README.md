@@ -30,10 +30,10 @@ Example image test:
 
 # 1- Use Trained Model
 ## Download the pre trained weights
- First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/open?id=19rYT577UqQwdJ4sNeq240c_X0NK3d1kB) and place them in their respective folders.
+ First you must download the pre-trained weights in Imagenet given in the following link [Pre-Trained Weights](https://drive.google.com/drive/u/0/folders/1ffxuT9TBz9ZZDgRM0uzZ7Ffi4CWEwdNf) and place them in their respective folders.
 
 ### Download Weights Trained Model
-You can use already trained models to use directly in X-ray images to detect "Gun, Knife, Razor and Shuriken", for this create the "Weights Trained Model" folder in the repository folder and download the weights in the folder [Weights Trained Model](https://drive.google.com/open?id=13oyOlrYvLaIBY5YvCZiLtVtM_pQgYlA9).
+You can use already trained models to use directly in X-ray images to detect "Gun, Knife, Razor and Shuriken", for this create the "Weights Trained Model" folder in the repository folder and download the weights in the folder [Weights Trained Model](https://drive.google.com/drive/u/0/folders/1B832BTuheU7pNzSxMFWU_f5Xkwu70bn2).
 Follow the following commands for detection:
 
 + `python predict_yolo2.py -c config_full_yolo2_infer.json -i input_path/folder -o save/folder/detection` Yolov2
